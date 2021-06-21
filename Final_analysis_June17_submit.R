@@ -5,7 +5,7 @@ library("lme4")
 library("gridExtra")
 
 #INPUT DATA
-Input <- read.csv("~/Projects/Collaborations/Sheth_immunology/IgG_NT_dataset_Jun11.csv")
+Input <- read.csv("~/IgG_NT_dataset_Jun11.csv")
 Input$Sex <- as.factor(as.character(Input$Sex))
 Input$Donor <- as.factor(as.character(Input$Donor))
 Input$NTassay <- as.factor(as.character(Input$NTassay))

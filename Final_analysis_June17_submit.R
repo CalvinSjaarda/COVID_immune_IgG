@@ -5,7 +5,7 @@ library("lme4")
 library("gridExtra")
 
 #INPUT DATA
-Input <- read.csv("~/IgG_NT_dataset_Jun11.csv")
+Input <- read.csv("~/IgG_NT_dataset_Aug5.csv")
 Input$Sex <- as.factor(as.character(Input$Sex))
 Input$Donor <- as.factor(as.character(Input$Donor))
 Input$NTassay <- as.factor(as.character(Input$NTassay))
@@ -256,11 +256,11 @@ wilcox.test(IgG_YHLO ~ NTassay, data=NT_data)
 
 #SUPPLEMENTARY FIGURE 1
 donorY <- TIME_data_YHLO %>%
-  filter(Donor %in% c("13921","13964","14124","13916","14094","14153","14028",
-                      "14090","14192","14275","14171","13994","14288","13923","14084"))
+  filter(Donor %in% c("1010","1012","1014","1041","1070","1104","1155",
+                      "1158","1162","1191","1216","1231","1247","1317","1322"))
 donorA <- TIME_data_Abbott %>%
-  filter(Donor %in% c("13921","13964","14124","13916","14094","14153","14028",
-                      "14090","14192","14275","14171","13994","14288","13923","14084"))
+  filter(Donor %in% c("1010","1012","1014","1041","1070","1104","1155",
+                      "1158","1162","1191","1216","1231","1247","1317","1322"))
 
 #FIGURE S1: Donor plot for iFlash
 FIGS1A <- ggplot(donorY, aes(x=Time, y=AB, color = Donor)) + 
